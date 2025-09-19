@@ -4,8 +4,8 @@ const app = express();
 
 var global = {
     teachers: [
-        {name: 'Gipsz Jakab', hisClass: '9/A', favourite: false},
-        {name: 'Kolompár Dzsoki', hisClass: '18/C', favourite: true},
+        {name: 'Gipsz Jakab', hisClass: '9/A', favorite: false},
+        {name: 'Kolompár Dzsoki', hisClass: '18/C', favorite: true},
     ],
     //favouriteTeacherIdx: null,
 }
