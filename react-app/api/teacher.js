@@ -3,8 +3,12 @@
 import { globalTeachers } from './globals.js';
 
 export default async function handler(req, res) {
+    let global = globalTeachers;
+    console.log('globalTeachers', globalTeachers);
+    console.log('global', global);
+
     let found = null;
-    if (globalTeachers) found = globalTeachers.teachers.find(teacher=>teacher.favorite);
+    if (global) found = global.teachers.find(teacher=>teacher.favorite);
 
     if (found) {
         res.status(200).json(found);
