@@ -11,7 +11,6 @@ var global = {
 
 // local test: GET http://localhost:3333/teachers
 app.get('/teachers', (req, res)=> {
-    // TODO - implement GET /teachers
     res.status(200).json(global.teachers);
 })
 
