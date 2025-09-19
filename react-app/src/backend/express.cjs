@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 
 var global = {
@@ -8,6 +9,8 @@ var global = {
     ],
     //favouriteTeacherIdx: null,
 }
+
+app.use(cors());
 
 // local test: GET http://localhost:3333/teachers
 app.get('/teachers', (req, res)=> {
