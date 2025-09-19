@@ -18,7 +18,7 @@ export default class Teachers extends React.Component {
 
     async componentDidMount() {
         // callout for teachers data
-        fetch('http://localhost:3333/teachers')
+        fetch('/api/teachers')
             .then(data => data.json())
             .then(data => {
                 console.log('got data: ', data);
@@ -30,7 +30,7 @@ export default class Teachers extends React.Component {
             })
 
         try {
-            const favoriteTeacherJson = await fetch('http://localhost:3333/teacher/true');
+            const favoriteTeacherJson = await fetch('/api/teacher/true');
             const favoriteTeacher = await favoriteTeacherJson.json();
             console.log('favoriteTeacher', favoriteTeacher);
         } catch(err) {
